@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "SWEN 444 Pharmacy Manager V2"

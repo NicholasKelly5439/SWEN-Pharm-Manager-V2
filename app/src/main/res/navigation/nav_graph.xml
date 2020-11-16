@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainMenu">
+
+    <fragment
+        android:id="@+id/MainMenu"
+        android:name="com.example.swen444pharmacymanagerv2.fragment_menu"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_MainMenu_to_baggingMain"
+            app:destination="@id/baggingMain" />
+        <action
+            android:id="@+id/action_MainMenu_to_fillingMain"
+            app:destination="@id/fillingMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/baggingMain"
+        android:name="com.example.swen444pharmacymanagerv2.BaggingMain"
+        android:label="fragment_bagging_main"
+        tools:layout="@layout/fragment_bagging_main" >
+        <action
+            android:id="@+id/action_baggingMain_to_baggingRxScanning"
+            app:destination="@id/baggingRxScanning" />
+        <action
+            android:id="@+id/action_baggingMain_to_MainMenu"
+            app:destination="@id/MainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/baggingRxScanning"
+        android:name="com.example.swen444pharmacymanagerv2.BaggingRxScanning"
+        android:label="fragment_bagging_rx_scanning"
+        tools:layout="@layout/fragment_bagging_rx_scanning" >
+        <action
+            android:id="@+id/action_baggingRxScanning_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_baggingRxScanning_to_baggingMain"
+            app:destination="@id/baggingMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillingAlternatives"
+        android:name="com.example.swen444pharmacymanagerv2.FillingAlternatives"
+        android:label="fragment_filling_alternatives"
+        tools:layout="@layout/fragment_filling_alternatives" >
+        <action
+            android:id="@+id/action_fillingAlternatives_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_fillingAlternatives_to_fillingCounting"
+            app:destination="@id/fillingCounting" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillingCounting"
+        android:name="com.example.swen444pharmacymanagerv2.FillingCounting"
+        android:label="fragment_filling_counting"
+        tools:layout="@layout/fragment_filling_counting" >
+        <action
+            android:id="@+id/action_fillingCounting_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_fillingCounting_to_fillingRxScanning"
+            app:destination="@id/fillingRxScanning" />
+        <action
+            android:id="@+id/action_fillingCounting_to_fillingAlternatives"
+            app:destination="@id/fillingAlternatives" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillingLabelPreview"
+        android:name="com.example.swen444pharmacymanagerv2.FillingLabelPreview"
+        android:label="fragment_filling_label_preview"
+        tools:layout="@layout/fragment_filling_label_preview" >
+        <action
+            android:id="@+id/action_fillingLabelPreview_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_fillingLabelPreview_to_fillingRxScanning"
+            app:destination="@id/fillingRxScanning" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillingMain"
+        android:name="com.example.swen444pharmacymanagerv2.FillingMain"
+        android:label="fragment_filling_main"
+        tools:layout="@layout/fragment_filling_main" >
+        <action
+            android:id="@+id/action_fillingMain_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_fillingMain_to_fillingLabelPreview"
+            app:destination="@id/fillingLabelPreview" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillingRxScanning"
+        android:name="com.example.swen444pharmacymanagerv2.FillingRxScanning"
+        android:label="fragment_filling_rx_scanning"
+        tools:layout="@layout/fragment_filling_rx_scanning" >
+        <action
+            android:id="@+id/action_fillingRxScanning_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_fillingRxScanning_to_fillingAlternatives"
+            app:destination="@id/fillingAlternatives" />
+        <action
+            android:id="@+id/action_fillingRxScanning_to_fillingCounting"
+            app:destination="@id/fillingCounting" />
+    </fragment>
+</navigation>

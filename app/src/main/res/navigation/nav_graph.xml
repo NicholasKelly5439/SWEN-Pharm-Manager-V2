@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_MainMenu_to_inventoryMain"
             app:destination="@id/inventoryMain" />
+        <action
+            android:id="@+id/action_MainMenu_to_orderingMain"
+            app:destination="@id/orderingMain" />
     </fragment>
     <fragment
         android:id="@+id/baggingMain"
@@ -217,5 +220,59 @@
         <action
             android:id="@+id/action_inventoryMain_to_inventoryCycleScan"
             app:destination="@id/inventoryCycleScan" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderingHistory"
+        android:name="com.example.swen444pharmacymanagerv2.OrderingHistory"
+        android:label="fragment_ordering_history"
+        tools:layout="@layout/fragment_ordering_history" >
+        <action
+            android:id="@+id/action_orderingHistory_to_orderingMain"
+            app:destination="@id/orderingMain" />
+        <action
+            android:id="@+id/action_orderingHistory_to_MainMenu"
+            app:destination="@id/MainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderingList"
+        android:name="com.example.swen444pharmacymanagerv2.OrderingList"
+        android:label="fragment_ordering_list"
+        tools:layout="@layout/fragment_ordering_list" >
+        <action
+            android:id="@+id/action_orderingList_to_orderingMain"
+            app:destination="@id/orderingMain" />
+        <action
+            android:id="@+id/action_orderingList_to_MainMenu"
+            app:destination="@id/MainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderingMain"
+        android:name="com.example.swen444pharmacymanagerv2.OrderingMain"
+        android:label="fragment_ordering_main"
+        tools:layout="@layout/fragment_ordering_main" >
+        <action
+            android:id="@+id/action_orderingMain_to_orderingHistory"
+            app:destination="@id/orderingHistory" />
+        <action
+            android:id="@+id/action_orderingMain_to_orderingOrderConfirmation"
+            app:destination="@id/orderingOrderConfirmation" />
+        <action
+            android:id="@+id/action_orderingMain_to_orderingList"
+            app:destination="@id/orderingList" />
+        <action
+            android:id="@+id/action_orderingMain_to_MainMenu"
+            app:destination="@id/MainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderingOrderConfirmation"
+        android:name="com.example.swen444pharmacymanagerv2.OrderingOrderConfirmation"
+        android:label="fragment_ordering_order_confirmation"
+        tools:layout="@layout/fragment_ordering_order_confirmation" >
+        <action
+            android:id="@+id/action_orderingOrderConfirmation_to_orderingMain"
+            app:destination="@id/orderingMain" />
+        <action
+            android:id="@+id/action_orderingOrderConfirmation_to_MainMenu"
+            app:destination="@id/MainMenu" />
     </fragment>
 </navigation>

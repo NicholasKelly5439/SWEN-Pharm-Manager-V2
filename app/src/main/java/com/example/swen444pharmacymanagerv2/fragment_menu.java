@@ -49,15 +49,14 @@ public class fragment_menu extends Fragment {
             }
         });
 
-        /*
+
         view.findViewById(R.id.OrderingButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(fragment_menu.this)
-                        .navigate(R.id.action_MainMenu_to_OrderingMain);
+                        .navigate(R.id.action_MainMenu_to_orderingMain);
             }
         });
 
-         */
     }
 }

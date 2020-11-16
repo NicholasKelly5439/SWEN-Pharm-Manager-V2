@@ -77,16 +77,16 @@ public class FillingLabelPreview extends Fragment {
             }
         });
 
-        /*
+
         view.findViewById(R.id.BackImage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(FillingLabelPreview.this)
-                        .navigate(R.id.action_FillingLabelPreview_to_FillingMain);
+                        .navigate(R.id.action_fillingLabelPreview_to_fillingMain);
             }
         });
 
-         */
+
 
         view.findViewById(R.id.ContinueToScanButton).setOnClickListener(new View.OnClickListener() {
             @Override

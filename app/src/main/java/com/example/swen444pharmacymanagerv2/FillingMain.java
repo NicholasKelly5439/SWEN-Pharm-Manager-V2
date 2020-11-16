@@ -76,16 +76,22 @@ public class FillingMain extends Fragment {
             }
         });
 
-        /*
+
         view.findViewById(R.id.BackImage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(FillingMain.this)
-                        .navigate(R.id.action_FillingMain_to_MainMenu);
+                        .navigate(R.id.action_fillingMain_to_MainMenu);
             }
         });
 
-         */
+        view.findViewById(R.id.imageview_scanning_window).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(FillingMain.this)
+                        .navigate(R.id.action_fillingMain_to_fillingLabelPreview);
+            }
+        });
 
         view.findViewById(R.id.filling_bag_1).setOnClickListener(new View.OnClickListener() {
             @Override

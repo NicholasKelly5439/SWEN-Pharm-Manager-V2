@@ -58,6 +58,9 @@
         <action
             android:id="@+id/action_fillingAlternatives_to_fillingCounting"
             app:destination="@id/fillingCounting" />
+        <action
+            android:id="@+id/action_fillingAlternatives_to_fillingRxScanning"
+            app:destination="@id/fillingRxScanning" />
     </fragment>
     <fragment
         android:id="@+id/fillingCounting"
@@ -85,6 +88,9 @@
         <action
             android:id="@+id/action_fillingLabelPreview_to_fillingRxScanning"
             app:destination="@id/fillingRxScanning" />
+        <action
+            android:id="@+id/action_fillingLabelPreview_to_fillingMain"
+            app:destination="@id/fillingMain" />
     </fragment>
     <fragment
         android:id="@+id/fillingMain"

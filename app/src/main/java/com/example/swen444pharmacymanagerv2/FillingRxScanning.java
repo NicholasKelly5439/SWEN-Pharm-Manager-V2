@@ -76,16 +76,16 @@ public class FillingRxScanning extends Fragment {
             }
         });
 
-        /*
+
         view.findViewById(R.id.BackImage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(FillingRxScanning.this)
-                        .navigate(R.id.action_FillingMain_to_MainMenu);
+                        .navigate(R.id.action_fillingMain_to_MainMenu);
             }
         });
 
-         */
+
 
         view.findViewById(R.id.filling_drug_1).setOnClickListener(new View.OnClickListener() {
             @Override

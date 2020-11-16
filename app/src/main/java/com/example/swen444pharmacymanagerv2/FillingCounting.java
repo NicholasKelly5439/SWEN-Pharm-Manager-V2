@@ -77,16 +77,16 @@ public class FillingCounting extends Fragment {
             }
         });
 
-        /*
+
         view.findViewById(R.id.BackImage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(FillingCounting.this)
-                        .navigate(R.id.action_FillingCounting_to_FillingRxScanning);
+                        .navigate(R.id.action_fillingCounting_to_fillingRxScanning);
             }
         });
 
-         */
+
 
         view.findViewById(R.id.CountFinishedButton).setOnClickListener(new View.OnClickListener() {
             @Override

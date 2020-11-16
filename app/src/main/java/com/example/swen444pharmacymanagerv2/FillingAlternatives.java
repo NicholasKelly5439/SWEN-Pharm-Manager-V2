@@ -77,16 +77,16 @@ public class FillingAlternatives extends Fragment {
             }
         });
 
-        /*
+
         view.findViewById(R.id.BackImage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(FillingAlternatives.this)
-                        .navigate(R.id.action_FillingAlternatives_to_FillingRxScanning);
+                        .navigate(R.id.action_fillingAlternatives_to_fillingRxScanning);
             }
         });
 
-         */
+
 
         view.findViewById(R.id.Alternative1).setOnClickListener(new View.OnClickListener() {
             @Override

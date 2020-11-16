@@ -77,15 +77,15 @@ public class BaggingRxScanning extends Fragment {
             }
         });
 
-        /*
+
         view.findViewById(R.id.BackImage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(BaggingRxScanning.this)
-                        .navigate(R.id.action_BaggingRxScanning_to_BaggingMain);
+                        .navigate(R.id.action_baggingRxScanning_to_baggingMain);
             }
         });
-        */
+
 
         view.findViewById(R.id.imageview_scanning_window).setOnClickListener(new View.OnClickListener() {
             @Override

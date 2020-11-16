@@ -2,7 +2,9 @@ package com.example.swen444pharmacymanagerv2;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,5 +62,43 @@ public class InventoryCycleMismatch extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_inventory_cycle_mismatch, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+        view.findViewById(R.id.MenuImage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(InventoryCycleMismatch.this)
+                        .navigate(R.id.action_inventoryCycleMismatch_to_MainMenu);
+            }
+        });
+
+        view.findViewById(R.id.inventory_cycle_mismatch_back_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(InventoryCycleMismatch.this)
+                        .navigate(R.id.action_inventoryCycleMismatch_to_inventoryCycleEnterCount);
+            }
+        });
+
+        view.findViewById(R.id.btn_recount).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(InventoryCycleMismatch.this)
+                        .navigate(R.id.action_inventoryCycleMismatch_to_inventoryCycleEnterCount);
+            }
+        });
+
+        view.findViewById(R.id.btn_submit_mismatch).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(InventoryCycleMismatch.this)
+                        .navigate(R.id.action_inventoryCycleMismatch_to_inventoryCycleScan);
+            }
+        });
     }
 }

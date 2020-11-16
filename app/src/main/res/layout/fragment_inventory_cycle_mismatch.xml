@@ -1,14 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout11"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InventoryCycleMismatch">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Count Mismatch"
+            android:textSize="36sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="313dp"
+            android:background="#A6A6A6"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reason for mismatch:"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/mismatch_reason"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/mismatch_reason_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/mismatch_reason_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/mismatch_reason_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_recount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Recount" />
+
+            <Button
+                android:id="@+id/btn_submit_mismatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Submit" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/MenuImage"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="355dp"
+        android:src="@android:drawable/ic_dialog_dialer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/inventory_cycle_mismatch_back_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/abc_vector_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,9 @@ package com.example.swen444pharmacymanagerv2;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,5 +62,43 @@ public class InventoryBrowseSearch extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_inventory_browse_search, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+        view.findViewById(R.id.MenuImage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(InventoryBrowseSearch.this)
+                        .navigate(R.id.action_inventoryBrowseSearch_to_MainMenu);
+            }
+        });
+
+        view.findViewById(R.id.inventory_browse_search_back_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(InventoryBrowseSearch.this)
+                        .navigate(R.id.action_inventoryBrowseSearch_to_inventoryMain);
+            }
+        });
+
+        view.findViewById(R.id.btn_inventory_search).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(InventoryBrowseSearch.this)
+                        .navigate(R.id.action_inventoryBrowseSearch_to_inventoryBrowseList);
+            }
+        });
+
+        view.findViewById(R.id.browse_inventory_scanning_camera).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(InventoryBrowseSearch.this)
+                        .navigate(R.id.action_inventoryBrowseSearch_to_inventoryBrowseList);
+            }
+        });
     }
 }

@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_MainMenu_to_fillingMain"
             app:destination="@id/fillingMain" />
+        <action
+            android:id="@+id/action_MainMenu_to_inventoryMain"
+            app:destination="@id/inventoryMain" />
     </fragment>
     <fragment
         android:id="@+id/baggingMain"
@@ -106,5 +109,113 @@
         <action
             android:id="@+id/action_fillingRxScanning_to_fillingCounting"
             app:destination="@id/fillingCounting" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryBrowseDetails"
+        android:name="com.example.swen444pharmacymanagerv2.InventoryBrowseDetails"
+        android:label="fragment_inventory_browse_details"
+        tools:layout="@layout/fragment_inventory_browse_details" >
+        <action
+            android:id="@+id/action_inventoryBrowseDetails_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_inventoryBrowseDetails_to_inventoryBrowseList"
+            app:destination="@id/inventoryBrowseList" />
+        <action
+            android:id="@+id/action_inventoryBrowseDetails_to_inventoryBrowseSearch"
+            app:destination="@id/inventoryBrowseSearch" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryBrowseList"
+        android:name="com.example.swen444pharmacymanagerv2.InventoryBrowseList"
+        android:label="fragment_inventory_browse_list"
+        tools:layout="@layout/fragment_inventory_browse_list" >
+        <action
+            android:id="@+id/action_inventoryBrowseList_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_inventoryBrowseList_to_inventoryBrowseSearch"
+            app:destination="@id/inventoryBrowseSearch" />
+        <action
+            android:id="@+id/action_inventoryBrowseList_to_inventoryBrowseDetails"
+            app:destination="@id/inventoryBrowseDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryBrowseSearch"
+        android:name="com.example.swen444pharmacymanagerv2.InventoryBrowseSearch"
+        android:label="fragment_inventory_browse_search"
+        tools:layout="@layout/fragment_inventory_browse_search" >
+        <action
+            android:id="@+id/action_inventoryBrowseSearch_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_inventoryBrowseSearch_to_inventoryMain"
+            app:destination="@id/inventoryMain" />
+        <action
+            android:id="@+id/action_inventoryBrowseSearch_to_inventoryBrowseList"
+            app:destination="@id/inventoryBrowseList" />
+        <action
+            android:id="@+id/action_inventoryBrowseSearch_to_inventoryBrowseDetails"
+            app:destination="@id/inventoryBrowseDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryCycleEnterCount"
+        android:name="com.example.swen444pharmacymanagerv2.InventoryCycleEnterCount"
+        android:label="fragment_inventory_cycle_enter_count"
+        tools:layout="@layout/fragment_inventory_cycle_enter_count" >
+        <action
+            android:id="@+id/action_inventoryCycleEnterCount_to_inventoryCycleMismatch"
+            app:destination="@id/inventoryCycleMismatch" />
+        <action
+            android:id="@+id/action_inventoryCycleEnterCount_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_inventoryCycleEnterCount_to_inventoryCycleScan"
+            app:destination="@id/inventoryCycleScan" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryCycleMismatch"
+        android:name="com.example.swen444pharmacymanagerv2.InventoryCycleMismatch"
+        android:label="fragment_inventory_cycle_mismatch"
+        tools:layout="@layout/fragment_inventory_cycle_mismatch" >
+        <action
+            android:id="@+id/action_inventoryCycleMismatch_to_inventoryCycleEnterCount"
+            app:destination="@id/inventoryCycleEnterCount" />
+        <action
+            android:id="@+id/action_inventoryCycleMismatch_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_inventoryCycleMismatch_to_inventoryCycleScan"
+            app:destination="@id/inventoryCycleScan" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryCycleScan"
+        android:name="com.example.swen444pharmacymanagerv2.InventoryCycleScan"
+        android:label="fragment_inventory_cycle_scan"
+        tools:layout="@layout/fragment_inventory_cycle_scan" >
+        <action
+            android:id="@+id/action_inventoryCycleScan_to_inventoryCycleEnterCount"
+            app:destination="@id/inventoryCycleEnterCount" />
+        <action
+            android:id="@+id/action_inventoryCycleScan_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_inventoryCycleScan_to_inventoryMain"
+            app:destination="@id/inventoryMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryMain"
+        android:name="com.example.swen444pharmacymanagerv2.InventoryMain"
+        android:label="fragment_inventory_main"
+        tools:layout="@layout/fragment_inventory_main" >
+        <action
+            android:id="@+id/action_inventoryMain_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_inventoryMain_to_inventoryBrowseSearch"
+            app:destination="@id/inventoryBrowseSearch" />
+        <action
+            android:id="@+id/action_inventoryMain_to_inventoryCycleScan"
+            app:destination="@id/inventoryCycleScan" />
     </fragment>
 </navigation>

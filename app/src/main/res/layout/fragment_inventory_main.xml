@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout12"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InventoryMain">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/btn_cycle_count"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginTop="20dp"
+            android:text="Daily cycle count" />
+
+        <Button
+            android:id="@+id/btn_browse"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginTop="20dp"
+            android:text="Browse inventory" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/MenuImage"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="355dp"
+        android:src="@android:drawable/ic_dialog_dialer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/inventory_main_back_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/abc_vector_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

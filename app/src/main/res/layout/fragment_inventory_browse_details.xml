@@ -183,23 +183,15 @@
 
     </LinearLayout>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout2"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/MenuImage"

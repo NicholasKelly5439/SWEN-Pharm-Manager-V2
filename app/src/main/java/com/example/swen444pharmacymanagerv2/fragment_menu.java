@@ -31,16 +31,15 @@ public class fragment_menu extends Fragment {
             }
         });
 
-        /*
+
         view.findViewById(R.id.InventoryButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(fragment_menu.this)
-                        .navigate(R.id.action_MainMenu_to_InventoryMain);
+                        .navigate(R.id.action_MainMenu_to_inventoryMain);
             }
         });
 
-         */
 
         view.findViewById(R.id.FillingButton).setOnClickListener(new View.OnClickListener() {
             @Override

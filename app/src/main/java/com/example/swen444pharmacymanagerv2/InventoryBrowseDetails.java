@@ -72,7 +72,7 @@ public class InventoryBrowseDetails extends Fragment {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(InventoryBrowseDetails.this)
-                        .navigate(R.id.action_InventoryBrowseDetails_to_MainMenu);
+                        .navigate(R.id.action_inventoryBrowseDetails_to_MainMenu);
             }
         });
 
@@ -80,7 +80,7 @@ public class InventoryBrowseDetails extends Fragment {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(InventoryBrowseDetails.this)
-                        .navigate(R.id.action_InventoryBrowseDetails_to_InventoryBrowseList);
+                        .navigate(R.id.action_inventoryBrowseDetails_to_inventoryBrowseList);
             }
         });
 
@@ -88,7 +88,7 @@ public class InventoryBrowseDetails extends Fragment {
             @Override
             public void onClick(View v) {
                 NavHostFragment.findNavController(InventoryBrowseDetails.this)
-                        .navigate(R.id.action_InventoryBrowseDetails_to_InventoryBrowseSearch);
+                        .navigate(R.id.action_inventoryBrowseDetails_to_inventoryBrowseSearch);
             }
         });
 
